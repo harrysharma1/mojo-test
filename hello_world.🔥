@@ -1,0 +1,7 @@
+fn hello():
+    print("Hello, World!")
+
+fn main():
+    hello()
+
+
