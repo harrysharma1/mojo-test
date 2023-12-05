@@ -1,0 +1,73 @@
+struct Person:
+    var forename: String
+    var surname: String
+    var gender: String
+    var height: Float64
+    var weight: Float64
+    var age: Int
+    var job_title:String
+    
+    fn __init__(
+        inout self,
+        forename: String,
+        surname:String,
+        gender:String,
+        height:Float64,
+        weight:Float64,
+        age:Int,
+        job_title:String
+    ): 
+        self.forename=forename
+        self.surname=surname
+        self.gender=gender
+        self.height=height
+        self.weight=weight
+        self.age=age
+        self.job_title=job_title
+    
+    fn get_forename(self) -> String:
+        return self.forename
+    fn get_surname(self) -> String:
+        return self.surname
+    fn get_gender(self) ->String:
+        return self.gender
+    fn get_height(self) -> Float64:
+        return self.height
+    fn get_weight(self) -> Float64:
+        return self.weight
+    fn  get_age(self) -> Int:
+        return self.age
+    fn get_job_title(self) -> String:
+        return self.job_title
+    fn get_birth_year(self)->Int:
+        return 2023- self.age
+
+
+
+fn main():
+    let a = Person(
+        "John",
+        "Doe",
+        "Male",
+        1.80,
+        80.0,
+        30,
+        "Software Engineer"
+    )
+    print(
+        "First Name: "+ a.get_forename()
+        +"\n"
+        +"Surname: "+ a.get_surname()
+        +"\n"
+        +"Gender"+a.get_gender()
+        +"\n"
+        +"Height: "+a.get_height()
+        +"\n"
+        +"Weight: "+a.get_weight()
+        +"\n"
+        +"Age: "+a.get_age()
+        +"\n"
+        +"Job Title: "+a.get_job_title()
+        +"\n"
+        +"Birth Year: "+a.get_birth_year()
+        )
