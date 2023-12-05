@@ -1,5 +1,21 @@
 fn add(a: Int64, b: Int64)->Int64:
     return a + b
 
+fn pow(a: Int64, b: Int64=2)->Int64:
+    return a**b
+
+fn sub(a: Int64, b:Int64)->Int64:
+    return a-b
+
+fn mult(a:Int64, b:Int64)->Int64:
+    return a*b
+
+fn div( a:Float64,b:Float64)->Float64:
+    return a/b
 fn main():
     print(add(1,2))
+    print(pow(2,9))
+    print(sub(2,1))
+    print(mult(2,3))
+    print(div(2.0,0))
+    
